@@ -10,6 +10,8 @@ hadoop fs -cat /user/hduser/ricardo-output2/part-00000
 
 hadoop fs -cat /tmp/par*|head -50
 
+#RUN COMMANDS FOR HADOOP 
+
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.6.0.jar -mapper /home/hduser/hadoop_code/tfmapper.py -reducer /home/hduser/hadoop_code/tfreducer.py -input /user/hduser/* -output /tmp
 
 Reference: http://www.hongyusu.com/technology/2015/08/16/compute-tf-idf-by-hadoop-python
